@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Information</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <p>Weather in {{ weather['location'] }}:</p>
+        <p>Temperature: {{ weather['temperature'] }}°C</p>
+        <p>Humidity: {{ weather['humidity'] }}%</p>
+        <p>Description: {{ weather['description'] }}</p>
+    {% endif %}
+</body>
+</html>
